@@ -8,7 +8,8 @@ namespace 计算器
     {
         long currentNum = 0;
         long totalNum = 0;
-        Dictionary<int, long> keyValuePairs = new Dictionary<int, long>();
+        Dictionary<string, long> keyValuePairs = new Dictionary<string, long>();
+
         public Form1()
         {
             InitializeComponent();
