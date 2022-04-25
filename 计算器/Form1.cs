@@ -31,7 +31,30 @@ namespace 计算器
 
         public void HandleInput(string input)
         {
-            currentNum = currentNum * 10 + input;
+            switch (input)
+            {
+                case "0":
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                    currentNum = currentNum * 10 + Convert.ToInt64(input);
+                    break;
+                case "+":                 
+                case "-":
+                case "*":
+                case "/":
+                    keyValuePairs.Add(input, currentNum);
+                    currentNum = 0;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void Button_1_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
@@ -76,29 +99,14 @@ namespace 计算器
             }
         }
 
-        private void Button_sum_Click(object sender, EventArgs e)
-        {
-            keyValuePairs.Add("+",currentNum);
-            currentNum = 0;
-        }
+        private void Button_sum_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_Negative_Click(object sender, EventArgs e)
-        {
-            keyValuePairs.Add("-",currentNum);
-            currentNum = 0;
-        }
+        private void Button_Negative_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_Multi_Click(object sender, EventArgs e)
-        {
-            keyValuePairs.Add("*", currentNum);
-            currentNum = 0;
-        }
+        private void Button_Multi_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_Dev_Click(object sender, EventArgs e)
-        {
-            keyValuePairs.Add("/", currentNum);
-            currentNum = 0;
-        }
+        private void Button_Dev_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
+
     }
 }
 
