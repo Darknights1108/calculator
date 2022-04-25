@@ -120,6 +120,21 @@ namespace 计算器
             keyValuePairs.Add("+",currentNum);
             currentNum = 0;
         }
+
+        private void Button_Negative_Click(object sender, EventArgs e)
+        {
+            keyValuePairs.Add("-",currentNum);
+        }
+
+        private void Button_Multi_Click(object sender, EventArgs e)
+        {
+            keyValuePairs.Add("*", currentNum);
+        }
+
+        private void Button_Dev_Click(object sender, EventArgs e)
+        {
+            keyValuePairs.Add("/", currentNum);
+        }
     }
 }
 
