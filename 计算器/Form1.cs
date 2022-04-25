@@ -29,70 +29,30 @@ namespace 计算器
             TB_1.Text += number;
         }
 
-        public void HandleInput(int input)
+        public void HandleInput(string input)
         {
             currentNum = currentNum * 10 + input;
         }
 
-        private void Button_1_Click(object sender, EventArgs e)
-        {
-            HandleInput(1);
-            TextInput(1);
-        }
+        private void Button_1_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_2_Click(object sender, EventArgs e)
-        {
-            HandleInput(2);
-            TextInput(2);
-        }
+        private void Button_2_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_3_Click(object sender, EventArgs e)
-        {
-            HandleInput(3);
-            TextInput(3);
-        }
+        private void Button_3_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_4_Click(object sender, EventArgs e)
-        {
-            HandleInput(4);
-            TextInput(4);
-        }
+        private void Button_4_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_5_Click(object sender, EventArgs e)
-        {
-            HandleInput(5);
-            TextInput(5);
-        }
+        private void Button_5_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_6_Click(object sender, EventArgs e)
-        {
-            HandleInput(6);
-            TextInput(6);
-        }
+        private void Button_6_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_7_Click(object sender, EventArgs e)
-        {
-            HandleInput(7);
-            TextInput(7);
-        }
+        private void Button_7_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_8_Click(object sender, EventArgs e)
-        {
-            HandleInput(8);
-            TextInput(8);
-        }
+        private void Button_8_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_9_Click(object sender, EventArgs e)
-        {
-            HandleInput(9);
-            TextInput(9);
-        }
+        private void Button_9_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
-        private void Button_0_Click(object sender, EventArgs e)
-        {
-            HandleInput(0);
-            TextInput(0);
-        }
+        private void Button_0_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
         private void Button_Clear_Click(object sender, EventArgs e)
         {
