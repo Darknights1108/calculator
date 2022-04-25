@@ -118,6 +118,7 @@ namespace 计算器
         private void Button_sum_Click(object sender, EventArgs e)
         {
             keyValuePairs.Add("+",currentNum);
+            currentNum = 0;
         }
     }
 }
