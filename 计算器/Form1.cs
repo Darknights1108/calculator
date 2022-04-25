@@ -103,19 +103,21 @@ namespace 计算器
 
         private void Button_Delete_Click(object sender, EventArgs e)
         {
-
-           
-                int txtlength = TB_1.Text.Length;
-                if (txtlength != 1)
-                {
-                    TB_1.Text = TB_1.Text.Remove(txtlength - 1);
-                }
-                else
-                {
-                    TB_1.Text = 0.ToString();
+            int txtlength = TB_1.Text.Length;
+            if (txtlength != 1)
+            {
+                TB_1.Text = TB_1.Text.Remove(txtlength - 1);
+            }
+            else
+            {
+                TB_1.Text = 0.ToString();
                 return;
-                }
-              
+            }
+        }
+
+        private void Button_sum_Click(object sender, EventArgs e)
+        {
+            keyValuePairs.Add("+",currentNum);
         }
     }
 }
