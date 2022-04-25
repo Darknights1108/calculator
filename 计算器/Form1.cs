@@ -58,11 +58,12 @@ namespace 计算器
         {
             TB_1.Text = "0";
             currentNum = 0;
-
+            //todo 字典清空
         }
 
         private void Button_Delete_Click(object sender, EventArgs e)
         {
+            //todo backspace等待重做
             int txtlength = TB_1.Text.Length;
             if (txtlength != 1)
             {
@@ -85,7 +86,6 @@ namespace 计算器
         {
             keyValuePairs.Add("-",currentNum);
             currentNum = 0;
-
         }
 
         private void Button_Multi_Click(object sender, EventArgs e)
