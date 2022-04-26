@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using 计算器.modules;
 
 namespace 计算器
 {
@@ -8,7 +9,7 @@ namespace 计算器
     {
         long currentNum = 0;
         long totalNum = 0;
-        Dictionary<string, long> keyValuePairs = new Dictionary<string, long>();
+        List<KeyValueModel> keyValuePairs = new List<KeyValueModel>();
 
         public Form1()
         {
@@ -18,7 +19,7 @@ namespace 计算器
         public void TextInput()
         {
             string text = "";
-            foreach (KeyValuePair<string, long> keyValue in keyValuePairs)
+            foreach (KeyValueModel keyValue in keyValuePairs)
             {
                 text += keyValue.Value.ToString() + keyValue.Key;
             }
@@ -51,16 +52,17 @@ namespace 计算器
                 case "9":
                     currentNum = currentNum * 10 + Convert.ToInt64(input);
                     break;
-                case "+":
+                case "+":                 
                 case "-":
                 case "*":
                 case "/":
-                    keyValuePairs.Add(input, currentNum);
+                    keyValuePairs.Add(new KeyValueModel() { Key = input, Value = currentNum });
                     currentNum = 0;
                     break;
                 default:
                     break;
             }
+            TextInput();
         }
 
         private void Button_1_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
