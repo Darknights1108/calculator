@@ -15,18 +15,24 @@ namespace 计算器
             InitializeComponent();
         }
 
-        public void TextInput(int number)
+        public void TextInput()
         {
-            if (number == 0 && currentNum == 0)
+            string text = "";
+            foreach (KeyValuePair<string, long> keyValue in keyValuePairs)
             {
-                return;
+                text += keyValue.Value.ToString() + keyValue.Key;
             }
-            if (TB_1.Text == "0")
+
+            if (currentNum != 0)
             {
-                TB_1.Text = number.ToString();
-                return;
+                text += currentNum.ToString();
             }
-            TB_1.Text += number;
+            else if (text == "")
+            {
+                text = "0";
+            }
+
+            TB_1.Text = text;
         }
 
         public void HandleInput(string input)
@@ -45,7 +51,7 @@ namespace 计算器
                 case "9":
                     currentNum = currentNum * 10 + Convert.ToInt64(input);
                     break;
-                case "+":                 
+                case "+":
                 case "-":
                 case "*":
                 case "/":
