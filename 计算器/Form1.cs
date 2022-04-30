@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using 计算器.modules;
 
@@ -8,7 +9,7 @@ namespace 计算器
     public partial class Form1 : Form
     {
         long currentNum = 0;
-        long totalNum = 0;
+        string beforeInput = "";
         List<KeyValueModel> keyValuePairs = new List<KeyValueModel>();
 
         public Form1()
@@ -61,13 +62,26 @@ namespace 计算器
                 case "-":
                 case "*":
                 case "/":
-                    keyValuePairs.Add(new KeyValueModel() { Key = input, Value = currentNum });
-                    currentNum = 0;
+                    HandleSymbol(input);
                     break;
                 default:
                     break;
             }
             TextInput(input);
+            beforeInput = input;
+        }
+
+        private void HandleSymbol(string symbol)
+        {
+            if ((beforeInput == "+" || beforeInput == "-" || beforeInput == "*" || beforeInput == "/") && currentNum == 0)
+            {
+                keyValuePairs.Last().Key = symbol;
+            }
+            else
+            {
+                keyValuePairs.Add(new KeyValueModel() { Key = symbol, Value = currentNum });
+                currentNum = 0;
+            }
         }
 
         private void Button_1_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
