@@ -108,7 +108,8 @@ namespace 计算器
         {
             TB_1.Text = "0";
             currentNum = 0;
-            //todo 字典清空
+            beforeInput = "";
+            keyValuePairs.Clear();
         }
 
         private void Button_Delete_Click(object sender, EventArgs e)
