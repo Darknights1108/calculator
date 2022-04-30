@@ -114,17 +114,47 @@ namespace 计算器
 
         private void Button_Delete_Click(object sender, EventArgs e)
         {
-            //todo backspace等待重做
-            int txtlength = TB_1.Text.Length;
-            if (txtlength != 1)
+            if (currentNum == 0)
             {
-                TB_1.Text = TB_1.Text.Remove(txtlength - 1);
+                if (keyValuePairs.Count == 0)
+                {
+                    Button_Clear_Click(sender, e);
+                }
+                else if (TB_1.Text.Length > 1)
+                {
+                    string lastStr = TB_1.Text.Last().ToString();
+                    string lastStr2 = TB_1.Text.Substring(TB_1.Text.Length - 2, 1).ToString();
+                    if ((lastStr2 == "+" || lastStr2 == "-" || lastStr2 == "*" || lastStr2 == "/") && lastStr == "0")
+                    {
+                        beforeInput = lastStr2;
+                    }
+                    else
+                    {
+                        long value = keyValuePairs.Last().Value;
+                        keyValuePairs.RemoveAt(keyValuePairs.Count - 1);
+
+                        currentNum = value;
+
+                        beforeInput = value.ToString().Last().ToString();
+                    }
+                }
+                else
+                {
+                    throw new Exception("TB_1.Text.Length=" + TB_1.Text.Length + ";TB_1.Text=" + TB_1.Text);
+                }
             }
             else
             {
-                TB_1.Text = 0.ToString();
-                return;
+                long before = currentNum;
+                while (before > 10)
+                {
+                    before %= 10;
+                }
+                beforeInput = before.ToString();
+                currentNum /= 10;
             }
+
+            TextInput(beforeInput);
         }
 
         private void Button_sum_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
