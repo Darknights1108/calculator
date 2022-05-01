@@ -9,7 +9,7 @@ namespace 计算器
     public partial class Form1 : Form
     {
         long currentNum = 0;
-        string beforeInput = "";
+        string beforeInput = " ";
         List<KeyValueModel> keyValuePairs = new List<KeyValueModel>();
 
         public Form1()
@@ -107,8 +107,9 @@ namespace 计算器
         private void Button_Clear_Click(object sender, EventArgs e)
         {
             TB_1.Text = "0";
+            TB_2.Text = "";
             currentNum = 0;
-            beforeInput = "";
+            beforeInput = " ";
             keyValuePairs.Clear();
         }
 
@@ -167,7 +168,65 @@ namespace 计算器
 
         private void Button_Equal_Click(object sender, EventArgs e)
         {
+            TextInput(beforeInput);
+            if (currentNum == 0 && (beforeInput == "+" || beforeInput == "-"))
+            {
+                TB_2.Text = TB_1.Text.TrimEnd(beforeInput.ToCharArray()[0]) + "=";
+            }
+            else
+            {
+                TB_2.Text = TB_1.Text + "=";
+            }
 
+            List<string> symbolList = new List<string>() { "*", "/", "+", "-" };
+            for (int round = 0; round < symbolList.Count; round += 2)
+            {
+                List<string> currSymbolList = new List<string>() { symbolList[round], symbolList[round + 1] };
+
+                for (int i = 0; i < keyValuePairs.Count; i++)
+                {
+                    if (currSymbolList.Contains(keyValuePairs[i].Key))
+                    {
+                        if (i < keyValuePairs.Count - 1)//判断算式末尾
+                        {
+                            keyValuePairs[i + 1].Value = Eq(keyValuePairs[i].Key, keyValuePairs[i].Value, keyValuePairs[i + 1].Value);
+                        }
+                        else
+                        {
+                            if (currentNum == 0 && beforeInput != "0")
+                            {
+                                currentNum = keyValuePairs[i].Value;
+                            }
+                            else
+                            {
+                                currentNum = Eq(keyValuePairs[i].Key, keyValuePairs[i].Value, currentNum);
+                            }
+                            beforeInput = currentNum.ToString().Last().ToString();
+                        }
+
+                        keyValuePairs.RemoveAt(i--);
+                    }
+                }
+            }
+
+            TB_1.Text = currentNum.ToString();
+        }
+
+        private long Eq(string symbol, long a, long b)
+        {
+            if (symbol == "/" && b == 0)
+            {
+                throw new Exception("不能除0!");
+            }
+            switch (symbol)
+            {
+                case "*": return a * b;
+                case "/": return a / b;
+                case "+": return a + b;
+                case "-": return a - b;
+                default:
+                    throw new Exception("未支持运算符");
+            }
         }
     }
 }
