@@ -17,6 +17,10 @@ namespace 计算器
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 文本解析
+        /// </summary>
+        /// <param name="currentInput">当前输入字符 一般为当前触发按键</param>
         public void TextInput(string currentInput)
         {
             string text = "";
@@ -41,7 +45,10 @@ namespace 计算器
 
             TB_1.Text = text;
         }
-
+        /// <summary>
+        /// 数值参数
+        /// </summary>
+        /// <param name="input"></param>
         public void HandleInput(string input)
         {
             switch (input)
@@ -71,6 +78,10 @@ namespace 计算器
             beforeInput = input;
         }
 
+        /// <summary>
+        /// 字符参数
+        /// </summary>
+        /// <param name="symbol"></param>
         private void HandleSymbol(string symbol)
         {
             if ((beforeInput == "+" || beforeInput == "-" || beforeInput == "*" || beforeInput == "/") && currentNum == 0)
@@ -104,6 +115,11 @@ namespace 计算器
 
         private void Button_0_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
+        /// <summary>
+        /// 清除按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Clear_Click(object sender, EventArgs e)
         {
             TB_1.Text = "0";
@@ -113,6 +129,12 @@ namespace 计算器
             keyValuePairs.Clear();
         }
 
+        /// <summary>
+        /// 退格按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <exception cref="Exception"></exception>
         private void Button_Delete_Click(object sender, EventArgs e)
         {
             if (currentNum == 0)
@@ -165,7 +187,11 @@ namespace 计算器
         private void Button_Multi_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
         private void Button_Dev_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
-
+        /// <summary>
+        /// 实现四则运算
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Equal_Click(object sender, EventArgs e)
         {
             TextInput(beforeInput);
@@ -212,6 +238,14 @@ namespace 计算器
             TB_1.Text = currentNum.ToString();
         }
 
+        /// <summary>
+        /// 四则运算处理
+        /// </summary>
+        /// <param name="symbol"></param>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         private long Eq(string symbol, long a, long b)
         {
             if (symbol == "/" && b == 0)
