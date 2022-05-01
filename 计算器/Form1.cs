@@ -22,7 +22,7 @@ namespace 计算器
             string text = "";
             foreach (KeyValueModel keyValue in keyValuePairs)
             {
-                text += keyValue.Value.ToString() + keyValue.Key;
+                text += keyValue.ToString();
             }
 
             if (currentNum != 0)
