@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using 计算器.modules;
+using 计算器.ComputeManager;
 
 namespace 计算器
 {
@@ -11,6 +12,8 @@ namespace 计算器
         long currentNum = 0;
         string beforeInput = " ";
         List<KeyValueModel> keyValuePairs = new List<KeyValueModel>();
+
+        ComputeManager ComputeCapture = new ComputeManager();
 
         public Form1()
         {

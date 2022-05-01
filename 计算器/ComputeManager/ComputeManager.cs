@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace 计算器.ComputeManager
 {
-    internal class ComputeManager
+    public class ComputeManager
     {
         /// <summary>
         /// 文本解析
