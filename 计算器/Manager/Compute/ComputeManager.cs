@@ -95,7 +95,7 @@ namespace 计算器.Manager.Compute
         /// <param name="b"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        private long Eq(string symbol, long a, long b)
+        public long Eq(string symbol, long a, long b)
         {
             if (symbol == "/" && b == 0)
             {
