@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace 计算器.ComputeManager
+namespace 计算器.Manager.Compute
 {
     public class ComputeManager
     {

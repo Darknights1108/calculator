@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace 计算器.modules
+namespace 计算器.Model
 {
     /// <summary>
     /// 运算服务和值的模型

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using 计算器.modules;
-using 计算器.ComputeManager;
+using 计算器.Manager.Compute;
+using 计算器.Model;
 
 namespace 计算器
 {
