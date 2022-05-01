@@ -256,6 +256,7 @@
             this.Button_Equal.TabIndex = 19;
             this.Button_Equal.Text = "=";
             this.Button_Equal.UseVisualStyleBackColor = true;
+            this.Button_Equal.Click += new System.EventHandler(this.Button_Equal_Click);
             // 
             // TB_2
             // 

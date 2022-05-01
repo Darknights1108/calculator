@@ -165,6 +165,10 @@ namespace 计算器
 
         private void Button_Dev_Click(object sender, EventArgs e) => HandleInput(((Button)sender).Text);
 
+        private void Button_Equal_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
