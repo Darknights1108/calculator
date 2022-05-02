@@ -12,6 +12,7 @@ namespace 计算器
         long currentNum = 0;
         string beforeInput = " ";
         List<KeyValueModel> keyValuePairs = new List<KeyValueModel>();
+        Dictionary<int,string> stepList=new Dictionary<int, string>();
 
         ComputeManager computeManager = new ComputeManager();
 
@@ -164,7 +165,12 @@ namespace 计算器
             TB_1.Text = currentNum.ToString();
         }
 
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            GV_1.AutoGenerateColumns = false;
+            stepList.Add(3, "12");
+            GV_1.DataSource=stepList.ToList();
+        }
     }
 }
 

@@ -48,6 +48,7 @@
             this.TB_2 = new System.Windows.Forms.TextBox();
             this.TB_1 = new System.Windows.Forms.TextBox();
             this.GV_1 = new System.Windows.Forms.DataGridView();
+            this.Step = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.GV_1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             // 
             this.Button_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_7.Location = new System.Drawing.Point(9, 103);
-            this.Button_7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_7.Margin = new System.Windows.Forms.Padding(2);
             this.Button_7.Name = "Button_7";
             this.Button_7.Size = new System.Drawing.Size(69, 42);
             this.Button_7.TabIndex = 0;
@@ -67,7 +68,7 @@
             // 
             this.Button_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_8.Location = new System.Drawing.Point(94, 103);
-            this.Button_8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_8.Margin = new System.Windows.Forms.Padding(2);
             this.Button_8.Name = "Button_8";
             this.Button_8.Size = new System.Drawing.Size(69, 42);
             this.Button_8.TabIndex = 1;
@@ -79,7 +80,7 @@
             // 
             this.Button_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_9.Location = new System.Drawing.Point(180, 103);
-            this.Button_9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_9.Margin = new System.Windows.Forms.Padding(2);
             this.Button_9.Name = "Button_9";
             this.Button_9.Size = new System.Drawing.Size(69, 42);
             this.Button_9.TabIndex = 2;
@@ -91,7 +92,7 @@
             // 
             this.Button_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_4.Location = new System.Drawing.Point(9, 166);
-            this.Button_4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_4.Margin = new System.Windows.Forms.Padding(2);
             this.Button_4.Name = "Button_4";
             this.Button_4.Size = new System.Drawing.Size(69, 42);
             this.Button_4.TabIndex = 3;
@@ -103,7 +104,7 @@
             // 
             this.Button_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_5.Location = new System.Drawing.Point(94, 166);
-            this.Button_5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_5.Margin = new System.Windows.Forms.Padding(2);
             this.Button_5.Name = "Button_5";
             this.Button_5.Size = new System.Drawing.Size(69, 42);
             this.Button_5.TabIndex = 4;
@@ -115,7 +116,7 @@
             // 
             this.Button_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_6.Location = new System.Drawing.Point(180, 166);
-            this.Button_6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_6.Margin = new System.Windows.Forms.Padding(2);
             this.Button_6.Name = "Button_6";
             this.Button_6.Size = new System.Drawing.Size(69, 42);
             this.Button_6.TabIndex = 5;
@@ -127,7 +128,7 @@
             // 
             this.Button_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_1.Location = new System.Drawing.Point(9, 228);
-            this.Button_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_1.Margin = new System.Windows.Forms.Padding(2);
             this.Button_1.Name = "Button_1";
             this.Button_1.Size = new System.Drawing.Size(69, 42);
             this.Button_1.TabIndex = 6;
@@ -139,7 +140,7 @@
             // 
             this.Button_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_2.Location = new System.Drawing.Point(94, 228);
-            this.Button_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_2.Margin = new System.Windows.Forms.Padding(2);
             this.Button_2.Name = "Button_2";
             this.Button_2.Size = new System.Drawing.Size(69, 42);
             this.Button_2.TabIndex = 7;
@@ -151,7 +152,7 @@
             // 
             this.Button_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_0.Location = new System.Drawing.Point(9, 286);
-            this.Button_0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_0.Margin = new System.Windows.Forms.Padding(2);
             this.Button_0.Name = "Button_0";
             this.Button_0.Size = new System.Drawing.Size(240, 42);
             this.Button_0.TabIndex = 8;
@@ -163,7 +164,7 @@
             // 
             this.Button_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_3.Location = new System.Drawing.Point(180, 228);
-            this.Button_3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_3.Margin = new System.Windows.Forms.Padding(2);
             this.Button_3.Name = "Button_3";
             this.Button_3.Size = new System.Drawing.Size(69, 42);
             this.Button_3.TabIndex = 9;
@@ -175,7 +176,7 @@
             // 
             this.Button_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Delete.Location = new System.Drawing.Point(266, 103);
-            this.Button_Delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_Delete.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Delete.Name = "Button_Delete";
             this.Button_Delete.Size = new System.Drawing.Size(69, 42);
             this.Button_Delete.TabIndex = 11;
@@ -187,7 +188,7 @@
             // 
             this.Button_Multi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Multi.Location = new System.Drawing.Point(266, 166);
-            this.Button_Multi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_Multi.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Multi.Name = "Button_Multi";
             this.Button_Multi.Size = new System.Drawing.Size(69, 42);
             this.Button_Multi.TabIndex = 13;
@@ -199,7 +200,7 @@
             // 
             this.Button_sum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_sum.Location = new System.Drawing.Point(266, 228);
-            this.Button_sum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_sum.Margin = new System.Windows.Forms.Padding(2);
             this.Button_sum.Name = "Button_sum";
             this.Button_sum.Size = new System.Drawing.Size(69, 42);
             this.Button_sum.TabIndex = 14;
@@ -211,7 +212,7 @@
             // 
             this.Button_Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Clear.Location = new System.Drawing.Point(350, 103);
-            this.Button_Clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_Clear.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Clear.Name = "Button_Clear";
             this.Button_Clear.Size = new System.Drawing.Size(69, 42);
             this.Button_Clear.TabIndex = 16;
@@ -223,7 +224,7 @@
             // 
             this.Button_Dev.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Dev.Location = new System.Drawing.Point(350, 166);
-            this.Button_Dev.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_Dev.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Dev.Name = "Button_Dev";
             this.Button_Dev.Size = new System.Drawing.Size(69, 42);
             this.Button_Dev.TabIndex = 17;
@@ -235,7 +236,7 @@
             // 
             this.Button_Negative.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Negative.Location = new System.Drawing.Point(350, 228);
-            this.Button_Negative.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_Negative.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Negative.Name = "Button_Negative";
             this.Button_Negative.Size = new System.Drawing.Size(69, 42);
             this.Button_Negative.TabIndex = 18;
@@ -247,7 +248,7 @@
             // 
             this.Button_Equal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_Equal.Location = new System.Drawing.Point(266, 286);
-            this.Button_Equal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Button_Equal.Margin = new System.Windows.Forms.Padding(2);
             this.Button_Equal.Name = "Button_Equal";
             this.Button_Equal.Size = new System.Drawing.Size(154, 42);
             this.Button_Equal.TabIndex = 19;
@@ -259,8 +260,9 @@
             // 
             this.TB_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_2.Location = new System.Drawing.Point(9, 9);
-            this.TB_2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_2.Margin = new System.Windows.Forms.Padding(2);
             this.TB_2.Name = "TB_2";
+            this.TB_2.ReadOnly = true;
             this.TB_2.Size = new System.Drawing.Size(411, 38);
             this.TB_2.TabIndex = 20;
             this.TB_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -269,8 +271,9 @@
             // 
             this.TB_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TB_1.Location = new System.Drawing.Point(9, 42);
-            this.TB_1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TB_1.Margin = new System.Windows.Forms.Padding(2);
             this.TB_1.Name = "TB_1";
+            this.TB_1.ReadOnly = true;
             this.TB_1.Size = new System.Drawing.Size(411, 38);
             this.TB_1.TabIndex = 21;
             this.TB_1.Text = "0";
@@ -278,12 +281,26 @@
             // 
             // GV_1
             // 
+            this.GV_1.AllowUserToAddRows = false;
+            this.GV_1.AllowUserToDeleteRows = false;
             this.GV_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GV_1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Step});
             this.GV_1.Location = new System.Drawing.Point(425, 12);
             this.GV_1.Name = "GV_1";
+            this.GV_1.ReadOnly = true;
+            this.GV_1.RowHeadersVisible = false;
             this.GV_1.RowTemplate.Height = 23;
             this.GV_1.Size = new System.Drawing.Size(332, 314);
             this.GV_1.TabIndex = 22;
+            // 
+            // Step
+            // 
+            this.Step.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Step.DataPropertyName = "Value";
+            this.Step.HeaderText = "步骤";
+            this.Step.Name = "Step";
+            this.Step.ReadOnly = true;
             // 
             // Form1
             // 
@@ -310,9 +327,10 @@
             this.Controls.Add(this.Button_9);
             this.Controls.Add(this.Button_8);
             this.Controls.Add(this.Button_7);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "\\";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GV_1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -341,6 +359,7 @@
         private System.Windows.Forms.TextBox TB_2;
         private System.Windows.Forms.TextBox TB_1;
         private System.Windows.Forms.DataGridView GV_1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Step;
     }
 }
 
