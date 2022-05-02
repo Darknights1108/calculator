@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 using 计算器.Manager.Compute;
@@ -12,7 +13,7 @@ namespace 计算器
         long currentNum = 0;
         string beforeInput = " ";
         List<KeyValueModel> keyValuePairs = new List<KeyValueModel>();
-        Dictionary<int,string> stepList=new Dictionary<int, string>();
+        BindingList<KeyValueModel> stepList=new BindingList<KeyValueModel>();
 
         ComputeManager computeManager = new ComputeManager();
 
@@ -53,6 +54,7 @@ namespace 计算器
             currentNum = 0;
             beforeInput = " ";
             keyValuePairs.Clear();
+            stepList.Clear();
         }
 
         /// <summary>
@@ -161,6 +163,7 @@ namespace 计算器
                     }
                 }
             }
+            stepList.Add(new KeyValueModel() { Key = "123", Value = 123 });
 
             TB_1.Text = currentNum.ToString();
         }
@@ -168,8 +171,7 @@ namespace 计算器
         private void Form1_Load(object sender, EventArgs e)
         {
             GV_1.AutoGenerateColumns = false;
-            stepList.Add(3, "12");
-            GV_1.DataSource=stepList.ToList();
+            GV_1.DataSource= stepList;
         }
     }
 }

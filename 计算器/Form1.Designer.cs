@@ -297,7 +297,7 @@
             // Step
             // 
             this.Step.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Step.DataPropertyName = "Value";
+            this.Step.DataPropertyName = "Key";
             this.Step.HeaderText = "步骤";
             this.Step.Name = "Step";
             this.Step.ReadOnly = true;
