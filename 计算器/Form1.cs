@@ -20,25 +20,25 @@ namespace 计算器
             InitializeComponent();
         }
 
-        private void Button_1_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_1_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_2_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_2_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_3_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_3_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_4_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_4_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_5_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_5_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_6_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_6_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_7_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_7_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_8_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_8_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_9_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_9_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_0_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_0_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
         /// <summary>
         /// 清除按钮
@@ -102,17 +102,17 @@ namespace 计算器
                 currentNum /= 10;
             }
 
-            computeManager.TextInput(beforeInput);
+            TB_1.Text = computeManager.TextInput(beforeInput, ref currentNum, ref keyValuePairs);
         }
 
-        private void Button_sum_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_sum_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_Negative_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_Negative_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_Multi_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
+        private void Button_Multi_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
 
-        private void Button_Dev_Click(object sender, EventArgs e) => computeManager.HandleInput(((Button)sender).Text);
-        
+        private void Button_Dev_Click(object sender, EventArgs e) => TB_1.Text = computeManager.HandleInput(((Button)sender).Text, ref currentNum, ref beforeInput, ref keyValuePairs);
+
         /// <summary>
         /// 实现四则运算
         /// </summary>
@@ -120,7 +120,7 @@ namespace 计算器
         /// <param name="e"></param>
         private void Button_Equal_Click(object sender, EventArgs e)
         {
-            computeManager.TextInput(beforeInput);
+            TB_1.Text = computeManager.TextInput(beforeInput, ref currentNum, ref keyValuePairs);
             if (currentNum == 0 && (beforeInput == "+" || beforeInput == "-"))
             {
                 TB_2.Text = TB_1.Text.TrimEnd(beforeInput.ToCharArray()[0]) + "=";

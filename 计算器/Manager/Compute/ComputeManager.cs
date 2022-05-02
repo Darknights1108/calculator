@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using 计算器.Model;
 
 namespace 计算器.Manager.Compute
 {
@@ -12,7 +11,7 @@ namespace 计算器.Manager.Compute
         /// 文本解析
         /// </summary>
         /// <param name="currentInput">当前输入字符 一般为当前触发按键</param>
-        public void TextInput(string currentInput)
+        public string TextInput(string currentInput, ref long currentNum, ref List<KeyValueModel> keyValuePairs)
         {
             string text = "";
             foreach (KeyValueModel keyValue in keyValuePairs)
@@ -34,14 +33,14 @@ namespace 计算器.Manager.Compute
                 text = "0";
             }
 
-            TB_1.Text = text;
+            return text;
         }
 
         /// <summary>
         /// 数值参数
         /// </summary>
         /// <param name="input"></param>
-        public void HandleInput(string input)
+        public string HandleInput(string input, ref long currentNum, ref string beforeInput, ref List<KeyValueModel> keyValuePairs)
         {
             switch (input)
             {
@@ -61,20 +60,20 @@ namespace 计算器.Manager.Compute
                 case "-":
                 case "*":
                 case "/":
-                    HandleSymbol(input);
+                    HandleSymbol(input, ref currentNum, ref beforeInput, ref keyValuePairs);
                     break;
                 default:
                     break;
             }
-            TextInput(input);
             beforeInput = input;
+            return TextInput(input, ref currentNum, ref keyValuePairs);
         }
 
         /// <summary>
         /// 字符参数
         /// </summary>
         /// <param name="symbol"></param>
-        private void HandleSymbol(string symbol)
+        private void HandleSymbol(string symbol, ref long currentNum, ref string beforeInput, ref List<KeyValueModel> keyValuePairs)
         {
             if ((beforeInput == "+" || beforeInput == "-" || beforeInput == "*" || beforeInput == "/") && currentNum == 0)
             {

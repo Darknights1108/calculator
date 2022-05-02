@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace 计算器.Model
+﻿namespace 计算器.Model
 {
     /// <summary>
     /// 运算服务和值的模型
@@ -15,7 +9,7 @@ namespace 计算器.Model
         /// 字符存储
         /// </summary>
         public string Key { get; set; }
-        
+
         /// <summary>
         /// 数值存储
         /// </summary>
