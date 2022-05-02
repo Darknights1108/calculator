@@ -124,6 +124,7 @@ namespace 计算器
         private void Button_Equal_Click(object sender, EventArgs e)
         {
             TB_1.Text = computeManager.TextInput(beforeInput, ref currentNum, ref keyValuePairs);
+            stepList.Add(new KeyValueModel() { Key = TB_1.Text});
             if (currentNum == 0 && (beforeInput == "+" || beforeInput == "-"))
             {
                 TB_2.Text = TB_1.Text.TrimEnd(beforeInput.ToCharArray()[0]) + "=";
@@ -160,10 +161,11 @@ namespace 计算器
                         }
 
                         keyValuePairs.RemoveAt(i--);
+                        string step = computeManager.TextInput(beforeInput, ref currentNum, ref keyValuePairs);
+                        stepList.Add(new KeyValueModel() { Key = step });
                     }
                 }
             }
-            stepList.Add(new KeyValueModel() { Key = "123", Value = 123 });
 
             TB_1.Text = currentNum.ToString();
         }
