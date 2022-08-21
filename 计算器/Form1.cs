@@ -13,7 +13,7 @@ namespace 计算器
         long currentNum = 0;
         string beforeInput = " ";
         List<KeyValueModel> keyValuePairs = new List<KeyValueModel>();
-        BindingList<KeyValueModel> stepList=new BindingList<KeyValueModel>();
+        BindingList<KeyValueModel> stepList = new BindingList<KeyValueModel>();
 
         ComputeManager computeManager = new ComputeManager();
 
@@ -124,7 +124,7 @@ namespace 计算器
         private void Button_Equal_Click(object sender, EventArgs e)
         {
             TB_1.Text = computeManager.TextInput(beforeInput, ref currentNum, ref keyValuePairs);
-            stepList.Add(new KeyValueModel() { Key = TB_1.Text});
+            stepList.Add(new KeyValueModel() { Key = TB_1.Text });
             if (currentNum == 0 && (beforeInput == "+" || beforeInput == "-"))
             {
                 TB_2.Text = TB_1.Text.TrimEnd(beforeInput.ToCharArray()[0]) + "=";
@@ -173,7 +173,7 @@ namespace 计算器
         private void Form1_Load(object sender, EventArgs e)
         {
             GV_1.AutoGenerateColumns = false;
-            GV_1.DataSource= stepList;
+            GV_1.DataSource = stepList;
         }
     }
 }
