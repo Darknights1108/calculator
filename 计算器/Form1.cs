@@ -170,6 +170,11 @@ namespace 计算器
             TB_1.Text = currentNum.ToString();
         }
 
+        /// <summary>
+        /// 窗体加载
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             GV_1.AutoGenerateColumns = false;
